@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product-card a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Shop</h1>
+
+    <!-- Search Bar -->
+    <form method="GET" action="{% url 'home' %}">
+        <input type="text" name="q" placeholder="Search products..." value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Dynamic Category List -->
+    <h2>Categories</h2>
+<ul>
+    {% for category in categories %}
+        <li><a href="{% url 'category_products' category=category %}">{{ category }}</a></li>
+    {% empty %}
+        <li>No categories available</li>
+    {% endfor %}
+</ul>
+
+
+<!-- Grouped Products -->
+{% for category, category_products in categorized_products.items %}
+    <h2>{{ category }}</h2>
+    <div class="product-container">
+        {% for product in category_products %}
+            <div class="product-card">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                <h3><a href="{% url 'product_detail' product.id %}">{{ product.name }}</a></h3>
+                <p>${{ product.price }}</p>
+                <p><small>Added by: {{ product.created_by.username }}</small></p>
+                <p><small>{{ product.created_at|date:"F d, Y" }}</small></p>
+            </div>
+        {% endfor %}
+    </div>
+{% empty %}
+    <p>No products available.</p>
+{% endfor %}
+
+</body>
+</html>
