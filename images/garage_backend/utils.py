@@ -1,4 +1,5 @@
 import random
+import uuid
 
 
 def generate_random_string(length: int = 6) -> str:
@@ -9,3 +10,6 @@ def generate_random_string(length: int = 6) -> str:
     """
     return ''.join(random.choices('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', k=length))
 #
+
+def generate_unique_id():
+    return str(uuid.uuid4())

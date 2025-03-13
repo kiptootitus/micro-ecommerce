@@ -1,4 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 from rest_framework import permissions, generics
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -13,7 +15,8 @@ class RegisterVendorView(generics.CreateAPIView):
     permission_classes = [permissions.AllowAny]  # Anyone can register
 
     def perform_create(self, serializer):
-        serializer.save(created_by=self.request.user)
+        # Ensure that 'created_by' exists in Vendor model before using
+        serializer.save()
 
 
 # Login View (Should ideally be handled via Django authentication, not here)
@@ -25,14 +28,16 @@ class LoginVendorView(APIView):
 
 
 # List Vendors (Login required)
-class VendorListView(LoginRequiredMixin, generics.ListAPIView):
+@method_decorator(cache_page(60 * 15), name='dispatch')
+class VendorListView(generics.ListAPIView):
     queryset = Vendor.objects.all()
     serializer_class = VendorSerializer
     permission_classes = [permissions.IsAuthenticated]
 
 
 # Retrieve, Update, Delete Vendor (Login required)
-class VendorDetailView(LoginRequiredMixin, generics.RetrieveUpdateDestroyAPIView):
+@method_decorator(cache_page(60 * 15), name='dispatch')
+class VendorDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Vendor.objects.all()
     serializer_class = VendorSerializer
     permission_classes = [permissions.IsAuthenticated]

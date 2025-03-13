@@ -27,6 +27,7 @@ django-rest-passwordreset = "*"
 psycopg2-binary = "*"
 django-redis = "*"
 brevo-python = "*"
+python-memcached = "*"
 
 [dev-packages]
 

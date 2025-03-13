@@ -5,84 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d03101ac-1b9c-44f0-a0c9-c26e0c8b05ae" name="Changes" comment="updates">
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/accounts/accounts_handler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/accounts/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/vendor/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/cart/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/cart/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/cart/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/cart/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/cart/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/cart/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/cart/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/cart/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/communications/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/communications/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/communications/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/communications/communications_handler.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/communications/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/communications/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/communications/send_in_blue.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/communications/send_mail.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/communications/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/communications/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/communications/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/config_master.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/config_master.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage/middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage/middleware.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/Pipfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/garage_backend/garage_core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage_core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage_core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage_core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/media/products/iphone.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/orders/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/orders/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/orders/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/orders/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/orders/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/orders/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/orders/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/orders/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/payment/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/payment/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/payment/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/payment/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/payment/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/payment/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/payment/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/payment/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/products/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/products/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/products/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/products/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/products/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/products/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/products/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/products/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/products/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/products/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/shipment/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/shipment/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/shipment/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/shipment/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/shipment/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/shipment/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/shipment/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/shipment/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/templates/ecommerce/add_product.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/templates/ecommerce/category_products.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/templates/ecommerce/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/templates/ecommerce/product_detail.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/images/garage_backend/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/vendor/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/vendor/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/garage_backend/vendor/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/vendor/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/vendor/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/vendor/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/garage_backend/vendor/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/vendor/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/garage_backend/vendor/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/vendor/views.py" afterDir="false" />
     </list>
@@ -206,7 +135,7 @@
       <workItem from="1741686838867" duration="153000" />
       <workItem from="1741873356170" duration="3299000" />
       <workItem from="1741878338798" duration="13212000" />
-      <workItem from="1741895829726" duration="5263000" />
+      <workItem from="1741895829726" duration="6970000" />
     </task>
     <task id="LOCAL-00001" summary="set-up">
       <option name="closed" value="true" />
@@ -224,7 +153,23 @@
       <option name="project" value="LOCAL" />
       <updated>1741876937253</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="updates">
+      <option name="closed" value="true" />
+      <created>1741901863206</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1741901863206</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updates">
+      <option name="closed" value="true" />
+      <created>1741901871740</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1741901871740</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
