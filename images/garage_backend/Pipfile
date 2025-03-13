@@ -22,6 +22,8 @@ stripe = "*"
 django-phonenumber-field = "*"
 django-pipeline = "*"
 daphne = "*"
+xhtml2pdf = "*"
+django-rest-passwordreset = "*"
 
 [dev-packages]
 

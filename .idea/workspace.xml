@@ -4,21 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d03101ac-1b9c-44f0-a0c9-c26e0c8b05ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/accounts/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/cart/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/garage/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/orders/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/payment/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/products/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/products/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/shipment/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/templates/ecommerce/add_product.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/templates/ecommerce/category_products.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/templates/ecommerce/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/templates/ecommerce/product_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/vendor/urls.py" afterDir="false" />
+    <list default="true" id="d03101ac-1b9c-44f0-a0c9-c26e0c8b05ae" name="Changes" comment="set-up">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/garage_backend/accounts_handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/garage_backend/garage/middleware.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/garage_backend/garage/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/cart/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage_core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage_core/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,25 +29,32 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "timnaruto"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;timnaruto&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:/timnaruto/micro-ecommerce.git",
-    "accountId": "0f093ed4-cd6e-47cc-bdbd-ed69dbe73dc0"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:/timnaruto/micro-ecommerce.git&quot;,
+    &quot;accountId&quot;: &quot;0f093ed4-cd6e-47cc-bdbd-ed69dbe73dc0&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2u316C12l6XgzTm3Wiv8ZMoUzGQ" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -55,22 +63,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/naruto/.local/share/virtualenvs/garage_backend-rcGtbd85/bin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/naruto/.local/share/virtualenvs/garage_backend-rcGtbd85/bin&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="micro-ecommerce" type="Python.DjangoServer" factoryName="Django server">
       <module name="micro-ecommerce" />
@@ -114,11 +124,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741462272244</updated>
-      <workItem from="1741462272254" duration="7306000" />
+      <workItem from="1741462272254" duration="7641000" />
+      <workItem from="1741636980114" duration="6268000" />
+      <workItem from="1741686838867" duration="153000" />
     </task>
+    <task id="LOCAL-00001" summary="set-up">
+      <option name="closed" value="true" />
+      <created>1741469901174</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741469901174</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="set-up" />
+    <option name="LAST_COMMIT_MESSAGE" value="set-up" />
   </component>
 </project>
