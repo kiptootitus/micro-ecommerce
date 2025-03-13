@@ -24,6 +24,9 @@ django-pipeline = "*"
 daphne = "*"
 xhtml2pdf = "*"
 django-rest-passwordreset = "*"
+psycopg2-binary = "*"
+django-redis = "*"
+brevo-python = "*"
 
 [dev-packages]
 
