@@ -5,20 +5,21 @@ from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
-load_dotenv(dotenv_path)
+
+load_dotenv()
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ('django-insecure-v^2o42pch-vx9^1t8(f9_7)ndz_%(8h&b#@7*cfx=r%b(exis(')
+SECRET_KEY = os.getenv('SECRET_KEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get("DEBUG", default=0))
+DEBUG = os.getenv("DEBUG", "0").lower() in ("true", "1")
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
 
 
 # Application definition
@@ -36,17 +37,15 @@ INSTALLED_APPS = [
     'drf_yasg',
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
+    'django_rest_passwordreset',
 
     # third party apps
-    'accounts.apps.AccountsConfig',
-    'cart.apps.CartConfig',
+
     'garage.apps.GarageConfig',
-    'orders.apps.OrdersConfig',
-    'products.apps.ProductsConfig',
-    'shipment.apps.ShipmentConfig',
-    'payment.apps.PaymentConfig',
     'vendor.apps.VendorConfig',
-    'communications.apps.CommunicationsConfig'
+
+    'accounts.apps.AccountsConfig',
+
 
 ]
 
@@ -86,12 +85,8 @@ WSGI_APPLICATION = 'garage_core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),  # Default to 'localhost' if not set
-        'PORT': os.getenv('DB_PORT'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -144,6 +139,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.redis.RedisCache",
-        "LOCATION": "redis://127.0.0.1:8000/1",
+        "LOCATION": "redis://127.0.0.1:6379/1",
     }
 }

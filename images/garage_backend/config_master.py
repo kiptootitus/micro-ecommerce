@@ -25,7 +25,7 @@ USER_ROLE_CHOICES = (
     (ROLE_STAFF, ROLE_STAFF.title()),
     (ROLE_USER, ROLE_USER.title()),
 )
-
+USER_ROLE = ROLE_USER
 PROVINCE_CENTRAL = 'CENTRAL'
 
 PROVINCE_COPPERBELT = 'COPPERBELT'
@@ -83,11 +83,14 @@ COMMUNICATION_STATUS_CHOICES = (
     (STATUS_DENIED, STATUS_DENIED),
 )
 WEBSITE_NAME = 'Garage.com'
+
 SEND_BLUE_SENDER_EMAIL = 'no_reply@garagelimited.info'
+
 MAIL_SUBJECT = 'Garage.com'
-TEXT_CONTENT = ''
+
+TEXT_CONTENT ='Welcome to Garage.com'
 NOREPLY_MAIL=''
-TYPE_EMAIL = ''
+TYPE_EMAIL= ''
 COD = 'COD'
 CURRENCY_SYMBOL= 'Kshs'
 ORDER_CONFIRMATION_SUBJECT = "THANK YOU FOR YOUR ORDER"
@@ -106,3 +109,5 @@ if os.environ.get('mode') == 'production':
     COOKIES_SECURE = True
 else:
     COOKIES_SECURE = False
+
+OPTIONAL_FIELDS = ['id', 'created_datetime', 'created_by', 'modified_datetime', 'modified_by']
