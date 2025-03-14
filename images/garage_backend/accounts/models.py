@@ -26,7 +26,6 @@ class Address(BaseModel):
     zip_code = models.CharField(max_length=255)
 
 
-
 class Profile(BaseModel):
     user = models.OneToOneField('auth.User', on_delete=models.CASCADE, related_name='profile')
     role = models.CharField(max_length=255, choices=USER_ROLE_CHOICES, default=USER_ROLE)
@@ -41,6 +40,8 @@ class Profile(BaseModel):
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
+
+
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
     """
@@ -59,4 +60,3 @@ class Contact(BaseModel):
     """
     name = models.CharField(max_length=500, null=False, blank=False, )
     email = models.EmailField(null=False, blank=False, unique=True)
-

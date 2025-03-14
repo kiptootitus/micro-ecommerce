@@ -7,7 +7,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -55,10 +54,14 @@ class Migration(migrations.Migration):
                 ('created_by', models.CharField(default='', max_length=500, null=True)),
                 ('modified_datetime', models.DateTimeField(auto_now=True, null=True)),
                 ('modified_by', models.CharField(default='', max_length=500, null=True)),
-                ('role', models.CharField(choices=[('VENDOR', 'Vendor'), ('STAFF', 'Staff'), ('USER', 'User')], default='USER', max_length=255)),
+                ('role',
+                 models.CharField(choices=[('VENDOR', 'Vendor'), ('STAFF', 'Staff'), ('USER', 'User')], default='USER',
+                                  max_length=255)),
                 ('phone', phonenumber_field.modelfields.PhoneNumberField(max_length=255, region=None)),
-                ('address', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='profiles', to='accounts.address')),
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='profile', to=settings.AUTH_USER_MODEL)),
+                ('address', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='profiles',
+                                              to='accounts.address')),
+                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='profile',
+                                              to=settings.AUTH_USER_MODEL)),
             ],
             options={
                 'abstract': False,

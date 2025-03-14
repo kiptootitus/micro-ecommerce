@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>About Page</h1>
+    <p>Welcome to the about page</p>
+<p>
+
+   <ul>
+    {% for my_about in About %}
+    {% if my_about %}
+        <li>{{ my_about }}</li>
+    {% else %}
+        <li>There are no abouts</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+</p>
+{% endblock %}

@@ -2,9 +2,9 @@ from datetime import datetime
 
 from django.db import models
 
-from .middleware import get_current_user
 from config_master import TZ
 from utils import generate_random_string
+from .middleware import get_current_user
 
 
 # Create your models here.

@@ -23,10 +23,9 @@ class Vendor(BaseModel):
     date_of_issue = models.DateField(null=True)
     business_type_name = models.CharField(max_length=100, default='', null=True)
 
-    def __str__(self):
-        user_name = self.user.username if self.user else "No User"
-        business_type = self.business_type_name if self.business_type_name else "No Business Type"
-        return f"Vendor - {user_name} - ({business_type})"
+    def __str__(self, *args, **kwargs):
+
+        return f" {self.user}  ({self.business_type_name})"
 
     def is_fully_filled(self):
         """ Checks if all the fields have been filled """
