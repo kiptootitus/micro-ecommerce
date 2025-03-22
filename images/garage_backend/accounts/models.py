@@ -22,10 +22,10 @@ class Users(AbstractBaseUser):
     user_id = models.AutoField(primary_key=True)
     email = models.EmailField(max_length=100, unique=True)
     registration_date = models.DateField(auto_now_add=True)
-    username = models.CharField(max_length=255, unique=True, default=True)
     last_login = models.DateTimeField(auto_now=True)
     is_administrator = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=True)
     email_verified = models.BooleanField(default=False)
 
     objects = UserManager()
@@ -36,7 +36,7 @@ class Users(AbstractBaseUser):
 
 
 class Address(models.Model):
-    user = models.OneToOneField('Users', on_delete=models.CASCADE, related_name='address')
+    user = models.OneToOneField(Users, on_delete=models.CASCADE, related_name='address')
     street = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
     state = models.CharField(max_length=255)
