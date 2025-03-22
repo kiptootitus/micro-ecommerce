@@ -1,4 +1,5 @@
 from django.urls import path
+
 from .views import RegisterVendorView, LoginVendorView, VendorListView, VendorDetailView
 
 urlpatterns = [
@@ -7,4 +8,3 @@ urlpatterns = [
     path('vendors/<int:pk>', VendorListView.as_view(), name='vendors'),  # Works for class-based views
     path('vendors/<int:pk>/', VendorDetailView.as_view(), name='vendor_detail'),
 ]
-

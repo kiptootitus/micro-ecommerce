@@ -1,13 +1,13 @@
-
-from datetime import timedelta
-from dotenv import load_dotenv
-from pathlib import Path
 import os
+from datetime import timedelta
+from pathlib import Path
+
+from dotenv import load_dotenv
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv()
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -15,12 +15,10 @@ load_dotenv()
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "0").lower() in ("true", "1")
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
-
 
 # Application definition
 
@@ -38,6 +36,14 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
     'django_rest_passwordreset',
+    'django.contrib.sites',
+    "allauth_ui",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.github",
+    "widget_tweaks",
+    "slippers",
 
     # third party apps
 
@@ -46,10 +52,10 @@ INSTALLED_APPS = [
 
     'accounts.apps.AccountsConfig',
 
-
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -60,6 +66,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'garage_core.urls'
+AUTH_USER_MODEL = 'accounts.Users'
+ALLAUTH_UI_THEME = "light"
 
 TEMPLATES = [
     {
@@ -78,7 +86,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'garage_core.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
@@ -108,7 +115,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
@@ -120,7 +126,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
@@ -131,10 +136,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 
 CACHES = {
     "default": {
@@ -142,5 +145,3 @@ CACHES = {
         "LOCATION": "127.0.0.1:11211",  # Default Memcached port
     }
 }
-
-

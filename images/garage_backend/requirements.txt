@@ -16,3 +16,6 @@ stripe
 django-phonenumber-field
 django-pipeline
 daphne
+django-allauth-ui
+django-widget-tweaks
+slippers

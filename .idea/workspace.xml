@@ -5,30 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d03101ac-1b9c-44f0-a0c9-c26e0c8b05ae" name="Changes" comment="updates">
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/accounts/templates/profile_create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/garage/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/templates/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/templates/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_backend/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/Pipfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/garage_backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage/middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage/middleware.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage/migrations/0002_remove_product_category_delete_category_and_more.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage/migrations/0002_remove_product_category_delete_category_and_more.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage_core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage_core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/vendor/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/vendor/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage_core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage_core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/templates/about.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,26 +60,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Makefile Target.runserver.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/naruto/.local/share/virtualenvs/garage_backend-rcGtbd85/bin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Makefile Target.runserver.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/naruto/Documents/group_assignment&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Makefile Target.runserver">
     <configuration name="runserver" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
       <makefile filename="$PROJECT_DIR$/Makefile" target="runserver" workingDirectory="" arguments="">
@@ -134,8 +121,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.25659.43" />
-        <option value="bundled-python-sdk-181015f7ab06-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.25659.43" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.26053.29" />
+        <option value="bundled-python-sdk-b1dbf8ef85a6-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.26053.29" />
       </set>
     </attachedChunks>
   </component>
@@ -153,7 +140,9 @@
       <workItem from="1741873356170" duration="3299000" />
       <workItem from="1741878338798" duration="13212000" />
       <workItem from="1741895829726" duration="7370000" />
-      <workItem from="1741971040538" duration="15440000" />
+      <workItem from="1741971040538" duration="16220000" />
+      <workItem from="1742045510169" duration="7775000" />
+      <workItem from="1742665213302" duration="4323000" />
     </task>
     <task id="LOCAL-00001" summary="set-up">
       <option name="closed" value="true" />
@@ -195,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741903688197</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updates">
+      <option name="closed" value="true" />
+      <created>1741990462616</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1741990462616</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

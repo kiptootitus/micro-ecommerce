@@ -1,12 +1,16 @@
-from django.urls import path
+from django.urls import path, include
 
-from . import views
+from .views import (UserListCreateView, UserDetailView,
+                    CustomSignupView, CustomLoginView, CustomLogoutView)
 
 urlpatterns = [
-    path('address/', views.AddressListView.as_view(), name='address_list'),
-    path('address/<int:pk>/', views.AddressDetailView.as_view(), name='address_detail'),
-    path('contact/', views.ContactListView.as_view(), name='contact_list'),
-    path('profile/', views.ProfileListView.as_view(), name='profile_list'),
-    path('profile/<int:pk>/', views.ProfileDetailView.as_view(), name='profile_detail'),
-    path('create/', views.CreateProfileView.as_view(), name='profile-create'),
+    # API endpoints
+    path('api/users/', UserListCreateView.as_view(), name='user-list-create'),
+    path('api/users/<int:pk>/', UserDetailView.as_view(), name='user-detail'),
+
+    # Allauth endpoints with custom views
+    path('accounts/signup/', CustomSignupView.as_view(), name='account_signup'),
+    path('accounts/login/', CustomLoginView.as_view(), name='account_login'),
+    path('accounts/logout/', CustomLogoutView.as_view(), name='account_logout'),
+    path('accounts/', include('allauth.urls')),
 ]

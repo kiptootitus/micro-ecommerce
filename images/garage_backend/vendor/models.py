@@ -1,8 +1,9 @@
 from django.contrib.auth.models import User
 from django.db import models
+
+from config_master import OPTIONAL_FIELDS
 from garage.models import BaseModel
 from utils import generate_unique_id
-from config_master import OPTIONAL_FIELDS
 
 
 class Vendor(BaseModel):
@@ -24,9 +25,9 @@ class Vendor(BaseModel):
     business_type_name = models.CharField(max_length=100, default='', null=True)
 
     def __str__(self, *args, **kwargs):
-
         return f" {self.user}  ({self.business_type_name})"
 
     def is_fully_filled(self):
         """ Checks if all the fields have been filled """
-        return [field.name for field in self._meta.get_fields() if field.name not in OPTIONAL_FIELDS and not getattr(self, field.name)]
+        return [field.name for field in self._meta.get_fields() if
+                field.name not in OPTIONAL_FIELDS and not getattr(self, field.name)]

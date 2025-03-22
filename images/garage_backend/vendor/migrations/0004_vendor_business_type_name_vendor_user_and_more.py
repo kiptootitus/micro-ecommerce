@@ -6,7 +6,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('vendor', '0003_alter_vendor_options_and_more'),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
@@ -21,7 +20,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='vendor',
             name='user',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='vendor', to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='vendor',
+                                    to=settings.AUTH_USER_MODEL),
         ),
         migrations.AlterField(
             model_name='vendor',

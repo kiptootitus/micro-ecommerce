@@ -1,6 +1,8 @@
 import os
+
 import pytz
-from garage_core.settings import  TIME_ZONE
+
+from garage_core.settings import TIME_ZONE
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
@@ -88,11 +90,11 @@ SEND_BLUE_SENDER_EMAIL = 'no_reply@garagelimited.info'
 
 MAIL_SUBJECT = 'Garage.com'
 
-TEXT_CONTENT ='Welcome to Garage.com'
-NOREPLY_MAIL=''
-TYPE_EMAIL= ''
+TEXT_CONTENT = 'Welcome to Garage.com'
+NOREPLY_MAIL = ''
+TYPE_EMAIL = ''
 COD = 'COD'
-CURRENCY_SYMBOL= 'Kshs'
+CURRENCY_SYMBOL = 'Kshs'
 ORDER_CONFIRMATION_SUBJECT = "THANK YOU FOR YOUR ORDER"
 
 ORDER_SELLER_SUBJECT = "YOU RECEIVED AN ORDER"

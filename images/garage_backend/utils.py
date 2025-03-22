@@ -9,6 +9,8 @@ def generate_random_string(length: int = 6) -> str:
     :return: The generated string
     """
     return ''.join(random.choices('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', k=length))
+
+
 #
 
 def generate_unique_id():

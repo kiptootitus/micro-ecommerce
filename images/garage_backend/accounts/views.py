@@ -1,55 +1,44 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import render
-from rest_framework import generics, permissions, status, views
-from rest_framework.generics import CreateAPIView
-from rest_framework.response import Response
+from allauth.account.views import SignupView, LoginView, LogoutView
+from django.urls import reverse_lazy
+from rest_framework import generics, permissions
 
-from . import models, serializers
-
-
-# Create your views here.
-
-class AddressListView(LoginRequiredMixin, generics.ListCreateAPIView):
-    queryset = models.Address.objects.all()
-    serializer_class = serializers.AddressSerializer
-    permission_classes = [permissions.IsAuthenticated]
+from .models import Users
+from .serializers import UserSerializer
 
 
-class AddressDetailView(LoginRequiredMixin, generics.RetrieveUpdateDestroyAPIView):
-    queryset = models.Address.objects.all()
-    serializer_class = serializers.AddressSerializer
-    permission_classes = [permissions.IsAuthenticated]
+# API Views
+class UserListCreateView(generics.ListCreateAPIView):
+    queryset = Users.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [permissions.IsAdminUser]  # Only admins can list/create
 
-
-class ContactListView(LoginRequiredMixin, generics.ListCreateAPIView):
-    queryset = models.Contact.objects.all()
-    serializer_class = serializers.ContactSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
-
-class CreateProfileView(generics.CreateAPIView):
-    permission_classes = [permissions.IsAuthenticated]
-
-    def get(self, request, *args, **kwargs):
-        """Render a form page for profile creation (if needed)"""
-        return render(request, 'profile_create.html')
-
-    def post(self, request, *args, **kwargs):
-        """Handle profile creation"""
-        data = request.data.copy()  # Copy to avoid modifying original data
-        data['user'] = request.user.id
-        serializer = serializers.ProfileSerializer(data=data)
-        serializer.is_valid(raise_exception=True)
+    def perform_create(self, serializer):
+        # Custom logic before saving
         serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-class ProfileListView(LoginRequiredMixin, generics.ListCreateAPIView):
-    queryset = models.Profile.objects.all()
-    serializer_class = serializers.ProfileSerializer
+
+class UserDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Users.objects.all()
+    serializer_class = UserSerializer
     permission_classes = [permissions.IsAuthenticated]
 
+    def get_object(self):
+        # Allow users to only access their own data unless admin
+        obj = super().get_object()
+        if not self.request.user.is_administrator and obj != self.request.user:
+            self.permission_denied(self.request)
+        return obj
 
-class ProfileDetailView(LoginRequiredMixin, generics.RetrieveUpdateDestroyAPIView):
-    queryset = models.Profile.objects.all()
-    serializer_class = serializers.ProfileSerializer
-    permission_classes = [permissions.IsAuthenticated]
+
+# Allauth Views (optional customization)
+class CustomSignupView(SignupView):
+    template_name = 'account/custom_signup.html'
+    success_url = reverse_lazy('home')
+
+
+class CustomLoginView(LoginView):
+    template_name = 'account/custom_login.html'
+
+
+class CustomLogoutView(LogoutView):
+    template_name = 'account/custom_logout.html'

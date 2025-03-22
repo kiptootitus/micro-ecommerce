@@ -1,62 +1,53 @@
-from django.contrib.auth.models import User
+from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.db import models
-from django.db.models.signals import post_save
-from django.dispatch import receiver
-from django_rest_passwordreset.signals import reset_password_token_created
 from phonenumber_field.modelfields import PhoneNumberField
 
-from config_master import USER_ROLE_CHOICES, USER_ROLE
-from garage.models import BaseModel
+
+class UserManager(BaseUserManager):
+    def create_user(self, user_email, password=None, **extra_fields):
+        if not user_email:
+            raise ValueError('The Email field must be set')
+        email = self.normalize_email(user_email)
+        user = self.model(user_email=email, **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
+    def create_superuser(self, user_email, password=None, **extra_fields):
+        extra_fields.setdefault('is_administrator', True)
+        return self.create_user(user_email, password, **extra_fields)
 
 
-# Create your models here.
-class SendMail:
-    pass
+class Users(AbstractBaseUser):
+    user_id = models.AutoField(primary_key=True)
+    user_email = models.EmailField(max_length=100, unique=True)
+    registration_date = models.DateField(auto_now_add=True)
+    last_login = models.DateTimeField(auto_now=True)
+    is_administrator = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
+    email_verified = models.BooleanField(default=False)
+
+    objects = UserManager()
+    USERNAME_FIELD = 'user_email'
+
+    def __str__(self):
+        return self.user_email
 
 
-@receiver(reset_password_token_created)
-def password_reset_token_created(sender, instance, reset_password_token, *args, **kwargs):
-    SendMail().send_password_reset_email({'reset_password_token': reset_password_token})
-
-
-class Address(BaseModel):
+class Address(models.Model):
+    user = models.OneToOneField('Users', on_delete=models.CASCADE, related_name='address')
     street = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
     state = models.CharField(max_length=255)
-    zip_code = models.CharField(max_length=255)
+    zip_code = models.CharField(max_length=20)
 
 
-class Profile(BaseModel):
-    user = models.OneToOneField('auth.User', on_delete=models.CASCADE, related_name='profile')
-    role = models.CharField(max_length=255, choices=USER_ROLE_CHOICES, default=USER_ROLE)
-    phone = PhoneNumberField(max_length=255)
-    address = models.ForeignKey(Address, on_delete=models.CASCADE, related_name='profiles')
+class Profile(models.Model):
+    USER_ROLE_CHOICES = [('user', 'User'), ('admin', 'Admin')]  # Example choices
+    user = models.OneToOneField('Users', on_delete=models.CASCADE, related_name='profile')
+    role = models.CharField(max_length=255, choices=USER_ROLE_CHOICES, default='user')
+    phone = PhoneNumberField(null=True, blank=True)
+    address = models.OneToOneField(Address, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
-        return '%s (%s)' % (self.user.username, self.role)
-
-
-@receiver(post_save, sender=User)
-def create_user_profile(sender, instance, created, **kwargs):
-    if created:
-        Profile.objects.create(user=instance)
-
-
-@receiver(post_save, sender=User)
-def save_user_profile(sender, instance, **kwargs):
-    """
-    This is a signal that is called when saving a user object, and it updates the profile of the user.
-    :param sender:
-    :param instance: The user object that is being saved
-    :param kwargs:
-    :return: None
-    """
-    Profile.objects.get(user=instance).save()
-
-
-class Contact(BaseModel):
-    """
-    This holds address information of a user
-    """
-    name = models.CharField(max_length=500, null=False, blank=False, )
-    email = models.EmailField(null=False, blank=False, unique=True)
+        return f"{self.user.user_email} ({self.role})"

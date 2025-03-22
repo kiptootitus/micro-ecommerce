@@ -1,9 +1,9 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_page
 from rest_framework import permissions, generics
 from rest_framework.response import Response
 from rest_framework.views import APIView
+
 from .models import Vendor
 from .serializers import VendorSerializer
 

@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Create Profile</title>
     <style>
         body {
@@ -13,6 +13,7 @@
             text-align: center;
             margin: 50px;
         }
+
         form {
             background: white;
             padding: 20px;
@@ -21,6 +22,7 @@
             max-width: 400px;
             margin: auto;
         }
+
         input, select, button {
             width: 100%;
             padding: 10px;
@@ -28,6 +30,7 @@
             border: 1px solid #ddd;
             border-radius: 5px;
         }
+
         button {
             background: #28a745;
             color: white;
@@ -35,6 +38,7 @@
             border: none;
             cursor: pointer;
         }
+
         button:hover {
             background: #218838;
         }
@@ -42,30 +46,30 @@
 </head>
 <body>
 
-    <h2>Create Profile</h2>
+<h2>Create Profile</h2>
 
-    <form method="POST" >{% csrf_token %}
+<form method="POST">{% csrf_token %}
 
 
-        <label for="role">Role:</label>
-        <select id="role" name="role" required>
-            {% for value, label in USER_ROLE_CHOICES %}
-                <option value="{{ value }}">{{ label }}</option>
-            {% endfor %}
-        </select>
+    <label for="role">Role:</label>
+    <select id="role" name="role" required>
+        {% for value, label in USER_ROLE_CHOICES %}
+        <option value="{{ value }}">{{ label }}</option>
+        {% endfor %}
+    </select>
 
-        <label for="phone">Phone Number:</label>
-        <input type="text" id="phone" name="phone" required>
+    <label for="phone">Phone Number:</label>
+    <input id="phone" name="phone" required type="text">
 
-        <label for="address">Address:</label>
-        <select id="address" name="address" required>
-            {% for address in addresses %}
-                <option value="{{ address.id }}">{{ address }}</option>
-            {% endfor %}
-        </select>
+    <label for="address">Address:</label>
+    <select id="address" name="address" required>
+        {% for address in addresses %}
+        <option value="{{ address.id }}">{{ address }}</option>
+        {% endfor %}
+    </select>
 
-        <input type="submit" value="save">
-    </form>
+    <input type="submit" value="save">
+</form>
 
 </body>
 </html>
