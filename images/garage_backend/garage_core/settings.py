@@ -9,8 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv()
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY')
@@ -29,6 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
@@ -36,7 +37,6 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
     'django_rest_passwordreset',
-    'django.contrib.sites',
     "allauth_ui",
     "allauth",
     "allauth.account",
@@ -63,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'garage_core.urls'
@@ -115,6 +116,31 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+AUTHENTICATION_BACKENDS = [
+    # ...
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by email
+    'allauth.account.auth_backends.AuthenticationBackend',
+    # ...
+]
+
+SOCIALACCOUNT_PROVIDERS = {
+    # 'google': {
+    #     # For each OAuth based provider, either add a ``SocialApp``
+    #     # (``socialaccount`` app) containing the required client
+    #     # credentials, or list them here:
+    #     'APP': {
+    #         'client_id': '123',
+    #         'secret': '456',
+    #         'key': ''
+    #     }
+    # }
+}
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
@@ -140,8 +166,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CACHES = {
-    "default": {
-        "BACKEND": "django.core.cache.backends.memcached.PyMemcacheCache",
-        "LOCATION": "127.0.0.1:11211",  # Default Memcached port
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache',
+        'LOCATION': '127.0.0.1:11211',
     }
 }

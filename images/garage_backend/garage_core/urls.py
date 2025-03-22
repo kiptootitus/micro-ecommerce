@@ -25,11 +25,14 @@ urlpatterns = [
     path('', include('garage.urls')),
     path('', include('vendor.urls')),
     path('', include('accounts.urls')),
+    path('accounts/', include('allauth.urls')),
+
 
     # Swagger URLs
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     path('apis-doc/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+
 ]
 
 # Append static & media files handling at the end

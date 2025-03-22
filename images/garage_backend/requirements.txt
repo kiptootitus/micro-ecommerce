@@ -19,3 +19,5 @@ daphne
 django-allauth-ui
 django-widget-tweaks
 slippers
+django-allauth[socialaccount]
+dotenv

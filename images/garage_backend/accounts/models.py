@@ -4,34 +4,35 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, user_email, password=None, **extra_fields):
-        if not user_email:
+    def create_user(self, email, password=None, **extra_fields):
+        if not email:
             raise ValueError('The Email field must be set')
-        email = self.normalize_email(user_email)
-        user = self.model(user_email=email, **extra_fields)
+        email = self.normalize_email(email)
+        user = self.model(email=email, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, user_email, password=None, **extra_fields):
+    def create_superuser(self, email, password=None, **extra_fields):
         extra_fields.setdefault('is_administrator', True)
-        return self.create_user(user_email, password, **extra_fields)
+        return self.create_user(email, password, **extra_fields)
 
 
 class Users(AbstractBaseUser):
     user_id = models.AutoField(primary_key=True)
-    user_email = models.EmailField(max_length=100, unique=True)
+    email = models.EmailField(max_length=100, unique=True)
     registration_date = models.DateField(auto_now_add=True)
+    username = models.CharField(max_length=255, unique=True, default=True)
     last_login = models.DateTimeField(auto_now=True)
     is_administrator = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     email_verified = models.BooleanField(default=False)
 
     objects = UserManager()
-    USERNAME_FIELD = 'user_email'
+    USERNAME_FIELD = 'email'
 
     def __str__(self):
-        return self.user_email
+        return self.email
 
 
 class Address(models.Model):
@@ -50,4 +51,4 @@ class Profile(models.Model):
     address = models.OneToOneField(Address, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
-        return f"{self.user.user_email} ({self.role})"
+        return f"{self.user.email} ({self.role})"

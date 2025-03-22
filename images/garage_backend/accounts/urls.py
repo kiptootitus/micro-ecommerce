@@ -12,5 +12,4 @@ urlpatterns = [
     path('accounts/signup/', CustomSignupView.as_view(), name='account_signup'),
     path('accounts/login/', CustomLoginView.as_view(), name='account_login'),
     path('accounts/logout/', CustomLogoutView.as_view(), name='account_logout'),
-    path('accounts/', include('allauth.urls')),
 ]

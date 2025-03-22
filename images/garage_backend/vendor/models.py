@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from django.conf import settings
 from django.db import models
 
 from config_master import OPTIONAL_FIELDS
@@ -11,7 +11,7 @@ class Vendor(BaseModel):
     This model contains fields that are available in all the models
     """
     id = models.CharField(max_length=100, primary_key=True, default=generate_unique_id, editable=False)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, related_name='vendor')
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     business_name = models.CharField(max_length=100, default='', null=True)
     email = models.EmailField(max_length=100, default='', null=True)
     is_active = models.BooleanField(default=True)

@@ -28,8 +28,11 @@ psycopg2-binary = "*"
 django-redis = "*"
 brevo-python = "*"
 python-memcached = "*"
-django-allauth = "*"
 django-allauth-ui = "*"
+django-widget-tweaks = "*"
+slippers = "*"
+django-allauth = {extras = ["socialaccount"], version = "*"}
+dotenv = "*"
 
 [dev-packages]
 

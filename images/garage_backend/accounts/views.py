@@ -39,6 +39,11 @@ class CustomSignupView(SignupView):
 class CustomLoginView(LoginView):
     template_name = 'account/custom_login.html'
 
+    def form_valid(self, form):
+        print("You are being directed to the home page")
+        return super().form_valid(form)
+
+
 
 class CustomLogoutView(LogoutView):
     template_name = 'account/custom_logout.html'

@@ -41,14 +41,14 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Users
-        fields = ['user_id', 'user_email', 'registration_date', 'last_login',
+        fields = ['user_id', 'email', 'registration_date', 'last_login',
                   'is_administrator', 'is_active', 'email_verified', 'profile', 'address']
         read_only_fields = ['registration_date', 'last_login']
 
     def create(self, validated_data):
         profile_data = validated_data.pop('profile')
         user = Users.objects.create_user(
-            user_email=validated_data['user_email'],
+            email=validated_data['email'],
             password=validated_data.get('password')
         )
         profile_serializer = ProfileSerializer(data=profile_data)
