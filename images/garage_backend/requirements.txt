@@ -21,3 +21,5 @@ django-widget-tweaks
 slippers
 django-allauth[socialaccount]
 dotenv
+django_rest_passwordreset
+pymemcache

@@ -1,9 +1,9 @@
 from allauth.account.views import SignupView, LoginView, LogoutView
 from django.urls import reverse_lazy
-from rest_framework import generics, permissions
-
+from rest_framework import generics, permissions, status
+from rest_framework.response import Response
 from .models import Users
-from .serializers import UserSerializer
+from .serializers import UserSerializer, UserLoginSerializer
 
 
 # API Views
@@ -28,6 +28,57 @@ class UserDetailView(generics.RetrieveUpdateDestroyAPIView):
         if not self.request.user.is_administrator and obj != self.request.user:
             self.permission_denied(self.request)
         return obj
+
+
+class UserRegisterCreateView(generics.CreateAPIView):
+    queryset = Users.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [permissions.AllowAny]
+
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+        headers = self.get_success_headers(serializer.data)
+        return Response(
+            {
+                'message': 'User registered successfully',
+                'user_id': serializer.instance.user_id
+            },
+            status=status.HTTP_201_CREATED,
+            headers=headers
+        )
+
+
+class UserLoginView(generics.GenericAPIView):
+    serializer_class = UserLoginSerializer
+    permission_classes = [permissions.AllowAny]
+
+    def post(self, request, *args, **kwargs):
+        email = request.data.get('email')
+        password = request.data.get('password')
+        try:
+            user = Users.objects.get(email=email)
+            if user.check_password(password):
+                return Response(
+                    {
+                        'message': 'Login successful',
+                        'user_id': user.user_id
+                    },
+                    status=status.HTTP_200_OK
+                )
+            else:
+                return Response(
+                    {'message': 'Invalid credentials'},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+        except Users.DoesNotExist:
+            return Response(
+                {'message': 'User does not exist'},
+                status=status.HTTP_404_NOT_FOUND
+            )
+
 
 
 # Allauth Views (optional customization)
