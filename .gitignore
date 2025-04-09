@@ -1,4 +1,15 @@
 .env
 
-../dbsqlite/
-node_modules
+/node_modules/
+./images/garage_backend/.venv
+*.log
+__pycache__/
+*.pyo
+*.pyc
+.DS_Store
+*.env
+*.db
+*.sqlite3
+*.sqlite
+*.pid
+*.log

@@ -4,25 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d03101ac-1b9c-44f0-a0c9-c26e0c8b05ae" name="Changes" comment="updates on login and signup apis">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/postgres/init.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/postgres/initdb.sh" afterDir="false" />
+    <list default="true" id="d03101ac-1b9c-44f0-a0c9-c26e0c8b05ae" name="Changes" comment="dockerfiles and docker-compose working">
       <change afterPath="$PROJECT_DIR$/qodana.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/micro-ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/micro-ecommerce.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/config_master.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/config_master.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/entrypoint.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage_core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage_core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage_core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage_core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/start-server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/start-server.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/db.sqlite3" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +171,7 @@
       <workItem from="1742665213302" duration="4475000" />
       <workItem from="1744121084228" duration="9012000" />
       <workItem from="1744133951256" duration="446000" />
-      <workItem from="1744134612619" duration="18634000" />
+      <workItem from="1744134612619" duration="19771000" />
     </task>
     <task id="LOCAL-00001" summary="set-up">
       <option name="closed" value="true" />
@@ -251,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744142520407</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="dockerfiles and docker-compose working">
+      <option name="closed" value="true" />
+      <created>1744160565915</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1744160565915</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +273,8 @@
     <MESSAGE value="set-up" />
     <MESSAGE value="updates" />
     <MESSAGE value="updates on login and signup apis" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates on login and signup apis" />
+    <MESSAGE value="dockerfiles and docker-compose working" />
+    <option name="LAST_COMMIT_MESSAGE" value="dockerfiles and docker-compose working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
