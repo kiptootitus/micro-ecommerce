@@ -4,16 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d03101ac-1b9c-44f0-a0c9-c26e0c8b05ae" name="Changes" comment="updates">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="d03101ac-1b9c-44f0-a0c9-c26e0c8b05ae" name="Changes" comment="updates on login and signup apis">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/postgres/init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/postgres/initdb.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qodana.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/micro-ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/micro-ecommerce.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/config_master.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/config_master.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/garage_backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/entrypoint.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/garage_backend/garage_core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage_core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage_core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage_core/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/garage_backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/start-server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/start-server.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +59,9 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -90,8 +102,27 @@
       </console-settings>
     </option>
   </component>
+  <component name="QodanaHighlightedReportService">
+    <option name="localRunNotPublishedPersistedInfo">
+      <LocalReportPersistedInfo>
+        <option name="path" value="/tmp/qodana_output/qodana.sarif.json" />
+        <option name="reportGuid" value="29a76039-5473-4797-b5a0-083a86c95bbc" />
+        <option name="reportName" value="micro-ecommerce/qodana/2025-04-09" />
+      </LocalReportPersistedInfo>
+    </option>
+  </component>
+  <component name="QodanaIsSelectedPersistenceService">
+    <option name="selectedOrLoading" value="true" />
+  </component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="/tmp/qodana_output/qodana.sarif.json" reportGuid="29a76039-5473-4797-b5a0-083a86c95bbc" reportId="micro-ecommerce/qodana/2025-04-09" />
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/images/garage_backend" />
       <recent name="$PROJECT_DIR$/images/garage_backend/static" />
     </key>
   </component>
@@ -154,7 +185,7 @@
       <workItem from="1742665213302" duration="4475000" />
       <workItem from="1744121084228" duration="9012000" />
       <workItem from="1744133951256" duration="446000" />
-      <workItem from="1744134612619" duration="4134000" />
+      <workItem from="1744134612619" duration="18634000" />
     </task>
     <task id="LOCAL-00001" summary="set-up">
       <option name="closed" value="true" />
@@ -212,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742669868172</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="updates on login and signup apis">
+      <option name="closed" value="true" />
+      <created>1744142520407</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1744142520407</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +278,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="set-up" />
     <MESSAGE value="updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+    <MESSAGE value="updates on login and signup apis" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates on login and signup apis" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

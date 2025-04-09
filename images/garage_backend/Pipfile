@@ -4,7 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "*"
+xhtml2pdf = "*"
+django-redis = "*"
+brevo-python = "*"
+python-memcached = "*"
+django = ">=4.2"
+psycopg2-binary = "*"
+asgiref = "*"
 pillow = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
@@ -22,17 +28,13 @@ stripe = "*"
 django-phonenumber-field = "*"
 django-pipeline = "*"
 daphne = "*"
-xhtml2pdf = "*"
-django-rest-passwordreset = "*"
-psycopg2-binary = "*"
-django-redis = "*"
-brevo-python = "*"
-python-memcached = "*"
 django-allauth-ui = "*"
 django-widget-tweaks = "*"
 slippers = "*"
 django-allauth = {extras = ["socialaccount"], version = "*"}
 dotenv = "*"
+django-rest-passwordreset = "*"
+python-decouple = "~=3.8"
 
 [dev-packages]
 

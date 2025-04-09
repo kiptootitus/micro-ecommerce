@@ -1,23 +1,17 @@
-import os
-from datetime import timedelta
 from pathlib import Path
+import os
+from decouple import AutoConfig, Csv
 
-from dotenv import load_dotenv
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-load_dotenv()
+# Load environment variables
+config = AutoConfig()
 
+# Security settings
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', cast=bool)
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", "0").lower() in ("true", "1")
-
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
 
 # Application definition
 
@@ -44,6 +38,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount.providers.github",
     "widget_tweaks",
     "slippers",
+    'django_redis',
 
     # third party apps
 
@@ -93,10 +88,23 @@ WSGI_APPLICATION = 'garage_core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('POSTGRES_DB', default='naruto'),
+        'USER': config('DB_USER', default='naruto'),
+        'PASSWORD': config('DB_PASSWORD', default='malia254'),
+        'HOST': config('DB_HOST', default='database'),
+        'PORT': config('DB_PORT', default='5432'),
     }
 }
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8050",
+    "http://localhost:8000",
+    "http://localhost:3000",  # React dev
+    "http://localhost:5173",  # Vite dev
+]
+CORS_ALLOW_ALL_ORIGINS = DEBUG
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -156,20 +164,39 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+# Ensure staticfiles directory exists
+os.makedirs(STATIC_ROOT, exist_ok=True)
+
+# Media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+os.makedirs(MEDIA_ROOT, exist_ok=True)
+
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+
+# Redis cache
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache',
-        'LOCATION': '127.0.0.1:11211',
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': f"redis://{config('REDIS_HOST', default='redis')}:{config('REDIS_PORT', default='6379')}/1",
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        },
+        'KEY_PREFIX': 'profiles_list'
     }
 }

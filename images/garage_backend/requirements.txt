@@ -1,4 +1,5 @@
-django
+Django>=4.2
+asgiref
 pillow
 djangorestframework
 django-cors-headers
@@ -22,4 +23,15 @@ slippers
 django-allauth[socialaccount]
 dotenv
 django_rest_passwordreset
-pymemcache
+
+python-decouple~=3.8
+dynaconf~=3.2.10
+psycopg2-binary~=2.9
+sqlparse
+inflection
+packaging>=21.0
+pytz>=2021.1
+uritemplate>=3.0.0
+pyyaml
+django-debug-toolbar
+django_redis
