@@ -1,0 +1,87 @@
+version: '3.9'
+services:
+  garage_backend:
+    image: garage_backend:latest
+    container_name: garage_backend
+    build:
+      context: ./images/garage_backend
+      dockerfile: Dockerfile
+      target: ${ENVIRONMENT}
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    stdin_open: true
+    tty: true
+    volumes:
+      - static_volume:/home/app/web/static
+      - media_volume:/home/app/web/media
+    depends_on:
+      - database
+      - redis
+    networks:
+      - default
+      - internal_local_network
+
+  database:
+    image: postgres:latest
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgres/initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_HOST=${POSTGRES_HOST}
+    networks:
+      - default
+      - internal_local_network
+
+
+  nginx-proxy:
+    build:
+      context: ./images/nginx
+      dockerfile: Dockerfile
+    container_name: garage_nginx
+    hostname: garage_nginx
+    restart: always
+    ports:
+      - "10443:10443"
+      - "1080:1080"
+    volumes:
+      - static_volume:/home/app/web/static
+      - media_volume:/home/app/web/media
+      - nginx-certs:/etc/nginx/nginx-certs
+      - vhost:/etc/nginx/vhost.d
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    depends_on:
+      - garage_backend
+    env_file:
+      - .env.nginx
+    networks:
+      - default
+      - internal_local_network
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    volumes:
+      - cache_data:/data
+    networks:
+      - default
+      - internal_local_network
+
+volumes:
+  static_volume:
+  media_volume:
+  postgres_data:
+  cache_data:
+  nginx-certs:
+  vhost:
+
+networks:
+  default:
+  internal_local_network:
+    driver: bridge
