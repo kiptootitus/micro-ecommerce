@@ -39,23 +39,17 @@ services:
       - default
       - internal_local_network
 
-
   nginx-proxy:
     build:
       context: ./images/nginx
       dockerfile: Dockerfile
-    container_name: garage_nginx
-    hostname: garage_nginx
-    restart: always
     ports:
-      - "10443:10443"
-      - "1080:1080"
+        - "8443:443"  # Use a non-privileged port if needed
+        - "8001:8000"
     volumes:
-      - static_volume:/home/app/web/static
-      - media_volume:/home/app/web/media
-      - nginx-certs:/etc/nginx/nginx-certs
-      - vhost:/etc/nginx/vhost.d
       - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./images/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./images/nginx/nginx-certs:/home/naruto/nginx-certs:ro
     depends_on:
       - garage_backend
     env_file:
@@ -63,6 +57,7 @@ services:
     networks:
       - default
       - internal_local_network
+
   redis:
     image: redis:latest
     ports:

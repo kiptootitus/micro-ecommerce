@@ -1,5 +1,16 @@
+FROM nginx:latest
 
-FROM nginxproxy/nginx-proxy
+# Remove the entire conf.d directory to prevent default configurations
+RUN rm -rf /etc/nginx/conf.d/*
 
-COPY vhost.d/default /etc/nginx/vhost.d/default
-COPY nginx-certs /etc/nginx/certs
+# Copy your custom nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Create directory for SSL certificates
+RUN mkdir -p /home/naruto/nginx-certs
+
+# Expose ports
+EXPOSE 443 8000
+
+# Start Nginx in the foreground
+CMD ["nginx", "-g", "daemon off;"]
