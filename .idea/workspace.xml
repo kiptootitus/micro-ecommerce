@@ -4,9 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d03101ac-1b9c-44f0-a0c9-c26e0c8b05ae" name="Changes" comment="nginx">
-      <change afterPath="$PROJECT_DIR$/images/garage_frontend/garage_front/src/utilis/axiosInterceptor.ts" afterDir="false" />
+    <list default="true" id="d03101ac-1b9c-44f0-a0c9-c26e0c8b05ae" name="Changes" comment="frontend">
+      <change afterPath="$PROJECT_DIR$/images/garage_front/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/garage_front/src/screens/LoginScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/garage_front/src/screens/RegisterScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/garage_front/src/utilis/axiosInterceptor.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/eslint.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/public/vite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/public/vite.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/src/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/src/assets/react.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/src/assets/react.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/src/utilis/axiosInterceptor.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +41,7 @@
         <option value="HTML File" />
         <option value="Python Script" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -62,6 +82,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "Docker.docker-compose.yaml.database: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.garage_backend: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.garage_front: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yaml.nginx-proxy: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yaml.nginx: Compose Deployment.executor": "Run",
     "Makefile Target.runserver.executor": "Run",
@@ -77,6 +100,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "/snap/pycharm-professional/469/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
@@ -97,20 +121,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images/garage_front" />
       <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/nginx/certs" />
       <recent name="$PROJECT_DIR$/nginx" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/images/garage_backend" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yaml.nginx-proxy: Compose Deployment">
-    <configuration name="runserver" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="runserver" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Docker.docker-compose.yaml.garage_backend: Compose Deployment">
     <configuration name="micro-ecommerce" type="Python.DjangoServer" factoryName="Django server">
       <module name="micro-ecommerce" />
       <option name="ENV_FILES" value="" />
@@ -141,6 +159,45 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yaml.database: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="database" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.garage_backend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="garage_backend" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.garage_front: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="garage_front" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="docker-compose.yaml.nginx-proxy: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -154,23 +211,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yaml.nginx: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="nginx" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yaml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yaml.garage_backend: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.database: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.garage_front: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yaml.nginx-proxy: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yaml.nginx: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +257,8 @@
       <workItem from="1744747882376" duration="344000" />
       <workItem from="1744752271190" duration="101000" />
       <workItem from="1744752610907" duration="75000" />
-      <workItem from="1744752702882" duration="2096000" />
+      <workItem from="1744752702882" duration="2629000" />
+      <workItem from="1744814441998" duration="5856000" />
     </task>
     <task id="LOCAL-00001" summary="set-up">
       <option name="closed" value="true" />
@@ -309,7 +356,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744304198436</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="frontend">
+      <option name="closed" value="true" />
+      <created>1744760135262</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1744760135262</updated>
+    </task>
+    <task id="LOCAL-00014" summary="frontend">
+      <option name="closed" value="true" />
+      <created>1744760426808</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1744760426808</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +402,8 @@
     <MESSAGE value="updates on login and signup apis" />
     <MESSAGE value="dockerfiles and docker-compose working" />
     <MESSAGE value="nginx" />
-    <option name="LAST_COMMIT_MESSAGE" value="nginx" />
+    <MESSAGE value="frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="frontend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

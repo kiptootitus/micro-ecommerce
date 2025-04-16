@@ -16,12 +16,38 @@ services:
     volumes:
       - static_volume:/home/app/web/static
       - media_volume:/home/app/web/media
+      - ./images/garage_backend:/home/app/web  # Mount source code for live reload
     depends_on:
       - database
       - redis
     networks:
       - default
       - internal_local_network
+    command: >
+      bash -c "python manage.py runserver 0.0.0.0:8000"
+
+  garage_front:
+    image: garage_front:latest
+    container_name: garage_front
+    build:
+      context: ./images/garage_front
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"  # Frontend exposed here (can also be 3000 etc.)
+    depends_on:
+      - garage_backend
+    networks:
+      - default
+      - internal_local_network
+    volumes:
+      - ./images/garage_front:/app  # Mount source code for live reload
+      - /app/node_modules  # Preserve node_modules to avoid conflicts
+    environment:
+      - VITE_HOST=0.0.0.0  # Ensure Vite binds to all interfaces
+      - VITE_PORT=5173     # Ensure Vite uses the correct port
+      - VITE_HMR=true      # Enable hot module replacement
+    command: >
+      npm run dev
 
   database:
     image: postgres:latest

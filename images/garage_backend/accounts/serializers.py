@@ -34,34 +34,33 @@ class ProfileSerializer(serializers.ModelSerializer):
         return instance
 
 class UserSerializer(serializers.ModelSerializer):
-    profile = ProfileSerializer()
-    address = AddressSerializer(source='profile.address', read_only=True)
-    password = serializers.CharField(write_only=True)
+    password = serializers.CharField(write_only=True, required=True)
+    confirm_password = serializers.CharField(write_only=True, required=True)
+    email = serializers.EmailField(required=True)
 
     class Meta:
         model = Users
         fields = [
-            'user_id', 'email', 'password', 'registration_date', 'last_login',
-            'is_administrator', 'is_active', 'email_verified', 'profile', 'address'
+            'user_id', 'email', 'password', 'confirm_password',
+            'registration_date', 'last_login', 'is_administrator',
+            'is_active', 'email_verified',
         ]
         read_only_fields = [
             'registration_date', 'last_login',
         ]
 
-    def create(self, validated_data):
-        profile_data = validated_data.pop('profile', {})
-        address_data = profile_data.pop('address', {})
+    def validate(self, data):
+        if data['password'] != data['confirm_password']:
+            raise serializers.ValidationError({"confirm_password": "Passwords must match."})
+        return data
 
+    def create(self, validated_data):
+        validated_data.pop('confirm_password')
         password = validated_data.pop('password')
         user = Users.objects.create_user(**validated_data)
         user.set_password(password)
         user.save()
-
-        address = Address.objects.create(**address_data)
-        Profile.objects.create(user=user, address=address, **profile_data)
-
         return user
-
 
 
 class UserLoginSerializer(serializers.Serializer):
