@@ -1,13 +1,10 @@
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+from django.contrib.auth.models import PermissionsMixin
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 
 
 class UserManager(BaseUserManager):
-    def __init__(self):
-        super().__init__()
-        self.is_superuser = None
-
     def create_user(self, email, password=None, **extra_fields):
         if not email:
             raise ValueError('The Email field must be set')
@@ -18,22 +15,20 @@ class UserManager(BaseUserManager):
         return user
 
     def create_superuser(self, email, password=None, **extra_fields):
-        extra_fields.setdefault('is_administrator', True)
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
+        extra_fields.setdefault('is_active', True)
 
-        if extra_fields.get('is_staff') is not True:
+        if not extra_fields.get('is_staff'):
             raise ValueError('Superuser must have is_staff=True.')
-        if extra_fields.get('is_superuser') is not True:
+        if not extra_fields.get('is_superuser'):
             raise ValueError('Superuser must have is_superuser=True.')
 
         return self.create_user(email, password, **extra_fields)
 
 
-
-
-class Users(AbstractBaseUser):
-    user_id = models.AutoField(primary_key=True,)
+class Users(AbstractBaseUser, PermissionsMixin):
+    user_id = models.AutoField(primary_key=True)
     email = models.EmailField(max_length=100, unique=True)
     registration_date = models.DateField(auto_now_add=True)
     last_login = models.DateTimeField(auto_now=True)
@@ -43,10 +38,13 @@ class Users(AbstractBaseUser):
     email_verified = models.BooleanField(default=False)
 
     objects = UserManager()
+
     USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
 
     def __str__(self):
         return self.email
+
 
 class Address(models.Model):
     street = models.CharField(max_length=255)
@@ -54,8 +52,9 @@ class Address(models.Model):
     state = models.CharField(max_length=255)
     zip_code = models.CharField(max_length=20)
 
+
 class Profile(models.Model):
-    USER_ROLE_CHOICES = [('user', 'User'), ('admin', 'Admin')]  # Example choices
+    USER_ROLE_CHOICES = [('user', 'User'), ('admin', 'Admin')]
     user = models.OneToOneField(Users, on_delete=models.CASCADE, related_name='profile')
     role = models.CharField(max_length=255, choices=USER_ROLE_CHOICES, default='user')
     phone = PhoneNumberField(null=True, blank=True)

@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d03101ac-1b9c-44f0-a0c9-c26e0c8b05ae" name="Changes" comment="dockerfile frontend, docker updates">
-      <change afterPath="$PROJECT_DIR$/images/garage_front/src/screens/HomeScreen.tsx" afterDir="false" />
+    <list default="true" id="d03101ac-1b9c-44f0-a0c9-c26e0c8b05ae" name="Changes" comment="profile updates">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_front/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_front/src/utilis/axiosInterceptor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/src/utilis/axiosInterceptor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage_core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage_core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage_core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage_core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_front/src/screens/LoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/src/screens/LoginScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,33 +64,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Docker.docker-compose.yaml.database: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yaml.garage_backend: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yaml.garage_front: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yaml.nginx-proxy: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yaml.nginx: Compose Deployment.executor": "Run",
-    "Makefile Target.runserver.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/naruto/Documents/django-channels",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/snap/pycharm-professional/469/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Docker.docker-compose.yaml.database: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yaml.garage_backend: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yaml.garage_front: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yaml.nginx-proxy: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yaml.nginx: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Makefile Target.runserver.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/naruto/Documents/django-channels&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/snap/pycharm-professional/475/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="micro-ecommerce" is-module-sdk="true">
@@ -206,8 +208,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.26053.29" />
-        <option value="bundled-python-sdk-b1dbf8ef85a6-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.26053.29" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-PY-251.23774.444" />
+        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
       </set>
     </attachedChunks>
   </component>
@@ -242,6 +244,8 @@
       <workItem from="1744752610907" duration="75000" />
       <workItem from="1744752702882" duration="2629000" />
       <workItem from="1744814441998" duration="8546000" />
+      <workItem from="1744823554984" duration="1552000" />
+      <workItem from="1744826426091" duration="3481000" />
     </task>
     <task id="LOCAL-00001" summary="set-up">
       <option name="closed" value="true" />
@@ -363,7 +367,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744820481151</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="profile updates">
+      <option name="closed" value="true" />
+      <created>1744824942731</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1744824942731</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +407,8 @@
     <MESSAGE value="nginx" />
     <MESSAGE value="frontend" />
     <MESSAGE value="dockerfile frontend, docker updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="dockerfile frontend, docker updates" />
+    <MESSAGE value="profile updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="profile updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

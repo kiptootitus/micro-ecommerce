@@ -1,21 +1,24 @@
 // @ts-ignore
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../utilis/axiosInterceptor';
 
 const LoginScreen: React.FC = () => {
   const [form, setForm] = useState({ email: '', password: '' });
+  const navigate = useNavigate(); // hook to programmatically navigate
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   // @ts-ignore
-    const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       const res = await axiosInstance.post('/accounts/signin/', form);
       localStorage.setItem('token', res.data.token);
       alert('Logged in!');
+      navigate('/'); // Redirect to homepage
     } catch (error) {
       alert('Login failed');
     }
