@@ -1,7 +1,8 @@
 from django.urls import path, include
 
 from .views import (UserListCreateView, UserDetailView,
-                    CustomSignupView, CustomLoginView, CustomLogoutView, UserRegisterCreateView, UserLoginView)
+                    CustomSignupView, CustomLoginView, CustomLogoutView, UserRegisterCreateView, UserLoginView,
+                    ProfileCreateView, UserProfileDetailView)
 
 urlpatterns = [
     # API endpoints
@@ -15,4 +16,7 @@ urlpatterns = [
     path('accounts/register/', UserRegisterCreateView.as_view(), name='user-register-create'),
 
     path('accounts/signin/', UserLoginView.as_view(), name='user-login'),
+    path('accounts/create', ProfileCreateView.as_view(), name='user-profile'),
+    path('profile/me/', UserProfileDetailView.as_view(), name='my-profile'),
+
 ]

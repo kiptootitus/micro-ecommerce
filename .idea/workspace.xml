@@ -4,28 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d03101ac-1b9c-44f0-a0c9-c26e0c8b05ae" name="Changes" comment="frontend">
-      <change afterPath="$PROJECT_DIR$/images/garage_front/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_front/src/screens/LoginScreen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_front/src/screens/RegisterScreen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/garage_front/src/utilis/axiosInterceptor.tsx" afterDir="false" />
+    <list default="true" id="d03101ac-1b9c-44f0-a0c9-c26e0c8b05ae" name="Changes" comment="dockerfile frontend, docker updates">
+      <change afterPath="$PROJECT_DIR$/images/garage_front/src/screens/HomeScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/eslint.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/public/vite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/public/vite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/src/assets/react.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/src/assets/react.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/src/utilis/axiosInterceptor.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/vite.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_frontend/garage_front/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_front/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/garage_front/src/utilis/axiosInterceptor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/src/utilis/axiosInterceptor.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +241,7 @@
       <workItem from="1744752271190" duration="101000" />
       <workItem from="1744752610907" duration="75000" />
       <workItem from="1744752702882" duration="2629000" />
-      <workItem from="1744814441998" duration="5856000" />
+      <workItem from="1744814441998" duration="8546000" />
     </task>
     <task id="LOCAL-00001" summary="set-up">
       <option name="closed" value="true" />
@@ -372,7 +355,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744760426808</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="dockerfile frontend, docker updates">
+      <option name="closed" value="true" />
+      <created>1744820481150</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1744820481151</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,7 +394,8 @@
     <MESSAGE value="dockerfiles and docker-compose working" />
     <MESSAGE value="nginx" />
     <MESSAGE value="frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="frontend" />
+    <MESSAGE value="dockerfile frontend, docker updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="dockerfile frontend, docker updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

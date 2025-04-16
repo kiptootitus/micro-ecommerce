@@ -18,20 +18,21 @@ class ProfileSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         address_data = validated_data.pop('address')
         address = Address.objects.create(**address_data)
-        profile = Profile.objects.create(address=address, **validated_data)
-        return profile
+        return Profile.objects.create(address=address, **validated_data)
 
     def update(self, instance, validated_data):
         address_data = validated_data.pop('address', None)
+
         if address_data:
             address_serializer = AddressSerializer(instance.address, data=address_data)
-            if address_serializer.is_valid():
-                address_serializer.save()
+            address_serializer.is_valid(raise_exception=True)
+            address_serializer.save()
 
         instance.role = validated_data.get('role', instance.role)
         instance.phone = validated_data.get('phone', instance.phone)
         instance.save()
         return instance
+
 
 class UserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True, required=True)

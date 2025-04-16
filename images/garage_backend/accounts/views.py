@@ -2,9 +2,9 @@ from allauth.account.views import SignupView, LoginView, LogoutView
 from django.urls import reverse_lazy
 from rest_framework import generics, permissions, status
 from rest_framework.response import Response
-from .models import Users
-from .serializers import UserSerializer, UserLoginSerializer
-
+from .models import Users, Profile
+from .serializers import UserSerializer, UserLoginSerializer, ProfileSerializer
+from rest_framework.permissions import IsAuthenticated
 
 # API Views
 class UserListCreateView(generics.ListCreateAPIView):
@@ -80,6 +80,18 @@ class UserLoginView(generics.GenericAPIView):
             )
 
 
+class ProfileCreateView(generics.CreateAPIView):
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
+    permission_classes = [IsAuthenticated]
+
+
+class UserProfileDetailView(generics.RetrieveAPIView):
+    serializer_class = ProfileSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_object(self):
+        return self.request.user.profile
 
 # Allauth Views (optional customization)
 class CustomSignupView(SignupView):
