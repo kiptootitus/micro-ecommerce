@@ -100,7 +100,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8050",
     "http://localhost:8000",
     "http://localhost:3000",  # React dev
-    "http://localhost:5173",  # Vite dev
+    "http://localhost:5173",
+
 ]
 CORS_ALLOW_ALL_ORIGINS = DEBUG
 
@@ -193,7 +194,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-# Redis cache
+# Redis cache it should hide the default key
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',

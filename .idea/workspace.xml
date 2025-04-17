@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d03101ac-1b9c-44f0-a0c9-c26e0c8b05ae" name="Changes" comment="profile updates">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage_core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage_core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_backend/garage_core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_backend/garage_core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/garage_front/src/screens/LoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/images/garage_front/src/screens/LoginScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,6 +241,8 @@
       <workItem from="1744814441998" duration="8546000" />
       <workItem from="1744823554984" duration="1552000" />
       <workItem from="1744826426091" duration="3481000" />
+      <workItem from="1744904067424" duration="559000" />
+      <workItem from="1744905089629" duration="8285000" />
     </task>
     <task id="LOCAL-00001" summary="set-up">
       <option name="closed" value="true" />
@@ -408,7 +405,8 @@
     <MESSAGE value="frontend" />
     <MESSAGE value="dockerfile frontend, docker updates" />
     <MESSAGE value="profile updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="profile updates" />
+    <MESSAGE value="production code" />
+    <option name="LAST_COMMIT_MESSAGE" value="production code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
